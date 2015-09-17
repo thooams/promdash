@@ -21,7 +21,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: m<%= ENV['PROMDASH_DATABASE_ADAPTER'] %>
+  adapter: <%= ENV['PROMDASH_DATABASE_ADAPTER'] %>
   encoding: utf8
   host: <%= ENV['PROMDASH_DATABASE_HOST'] %>
   database: <%= ENV['PROMDASH_DATABASE_NAME'] %>
