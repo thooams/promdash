@@ -21,9 +21,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: mysql2
+  adapter: m<%= ENV['PROMDASH_DATABASE_ADAPTER'] %>
   encoding: utf8
-  host: <%= ENV['PROMDASH_MYSQL_HOST'] %>
-  database: <%= ENV['PROMDASH_MYSQL_DATABASE'] %>
-  username: <%= ENV['PROMDASH_MYSQL_USERNAME'] %>
-  password: <%= ENV['PROMDASH_MYSQL_PASSWORD'] %>
+  host: <%= ENV['PROMDASH_DATABASE_HOST'] %>
+  database: <%= ENV['PROMDASH_DATABASE_NAME'] %>
+  username: <%= ENV['PROMDASH_DATABASE_USERNAME'] %>
+  password: <%= ENV['PROMDASH_DATABASE_PASSWORD'] %>
